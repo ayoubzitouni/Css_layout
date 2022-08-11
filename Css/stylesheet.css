@@ -9,24 +9,26 @@
 :root{
     --green_main:#00BFA5;
     --green_secondary:#817874;
+    --alpha:1;
+    --hover_alpha:0.8;
 }
 /* start header */
 header{
     display: flex;
-    height: 10vh;
+    height: 8vh;
     width: 100vw;
     justify-content: center;
     flex-wrap: wrap;
 }
 header > nav{
     display: flex;
-    width: 55vw;
+    width: 50vw;
     justify-content: space-between;
     align-items: center;
 }
 
 nav a > img {
-    width: 200px;
+    width: 250px;
 }
 nav ul{
     color: var(--green_secondary);
@@ -61,6 +63,7 @@ nav ul #department:hover #m_department{
     display:block;
 }
 nav li #m_department{
+    background-color: white;
     position: absolute;
     min-width: 200px;
     height: 18vh;
@@ -102,3 +105,89 @@ nav li #m_department ul li{
     }
 }
 /* end header */
+/* start home */
+main{
+    display: flex;
+    justify-content: center;
+}
+#home{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#home>h2{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--green_main);
+}
+#home>img{
+    margin: 50px;
+    width: 40px;
+}
+#home>#text{
+    margin: 70px 0;
+    display: flex;
+    justify-content: space-between;
+}
+#text .text{
+    margin: 10px;
+}
+#home #boxes{
+    display: flex;
+    justify-content: space-between;
+}
+#boxes .box{
+    max-width: 15vw;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 40px;
+    transition: all 0.25s ease-in-out;
+}
+
+.box h1{
+    color: white;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.box h2{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.box i{
+    color: white;
+}
+#boxes #patients_box{
+    background-color: rgba(0, 191, 165, var(--alpha));
+    
+}
+#boxes #patients_box:hover{
+    background-color: rgba(0, 191, 165, var(--hover_alpha));
+}
+#boxes #doctors_box{
+    background-color: rgba(130, 130, 255,var(--alpha));
+}
+#boxes #doctors_box:hover{
+    background-color: rgba(130, 130, 255,var(--hover_alpha));
+}
+#boxes #client_box{
+    background-color: rgba(38, 61, 66, var(--alpha));
+}
+#boxes #client_box:hover{
+    background-color: rgba(38, 61, 66, var(--hover_alpha));
+}
+.box select {
+    width: 100%;
+    font-size: 1.25rem;
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-top: 50px;
+    background-color: transparent;
+    border: none;
+}
+.box select option{
+color: black;
+}
+/* end home */
