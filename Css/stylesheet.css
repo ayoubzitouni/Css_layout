@@ -65,7 +65,7 @@ nav li #m_department{
     background-color: white;
     position: absolute;
     min-width: 200px;
-    height: 18vh;
+    height: 180px;
     top: 3vh;
     right: 0;
     border-radius: 5px;
@@ -174,49 +174,86 @@ main{
 .box select option{
 color: black;
 }
-@media only screen and (max-width:840px){
-    header{
-        height: 8vh;
-        align-items: center;
-    }
-    header > nav {
-        width: 100vw;
-        height: 5vh;
-    }
-    nav ul{
-        display: none;
-    }
-    nav a > img{
-        margin-left: 20px;
-        width: 200px;
-    }
-    #menu i{
-        display: block;
-    }
-    #home {
-        padding: 0;
-        width: 100vw;
-    }
+
+/* end partners */
+/* start numbers */
+#numbers{
+    position: relative;
+    background-color:rgba(38, 61, 66, 0.1);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15vh 0;
+    overflow: hidden;
+    
 }
-@media screen and (max-width:683px){
-    #text{
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-    }
-    #boxes{
-        flex-direction: column;
-        align-items: center;
-    }
-    #boxes .box{
-        padding: 0;
-        margin: 10px 0;
-        width: 100vw;
-    } 
-    #boxes .box i,h1,h2,select{
-        padding: 10px;
-    }
+#numsub{
+    width: 50%;
+    height: 30%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    grid-template-rows:repeat(2,1fr);
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
 }
+
+#numbers #numdiv{
+    grid-row-start:1 ;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10vh 0;
+}
+#numbers .numbers{
+    width: 50%;
+}
+#numbers img{
+    position: absolute;
+    width: 40vw;
+    left: 5vw;
+    z-index: -1;
+    bottom: -200px;
+}
+.numbers{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+}
+.numbers h2{
+    color: var(--green_main);
+    font-size: 1.5rem;
+}
+#numbers_text h1{
+    color: var(--green_main);
+    font-size: 1.5rem;
+
+}
+.numbers p{
+    font-size: 0.75rem;
+    color:var(--green_secondary);
+}
+.numbers i{
+    color: var(--green_main);
+}
+#numbers_text{
+    padding: 10vh 0;
+}
+#numbers_text h1{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+#numbers_text p{
+    margin: 50px 0;
+    font-size: .75rem;
+    color: var(--green_secondary);
+}
+
 /* end home */
 /* start partners */
 #partners{
@@ -264,6 +301,56 @@ color: black;
         text-align: center;
         width: 100%;       
     }
+    #text{
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #boxes{
+        flex-direction: column;
+        align-items: center;
+    }
+    #boxes .box{
+        padding: 0;
+        margin: 10px 0;
+        width: 100vw;
+    } 
+    #boxes .box i,h1,h2,select{
+        padding: 10px;
+    }
+}
+@media only screen and (max-width:840px){
+    header{
+        height: 8vh;
+        align-items: center;
+    }
+    header > nav {
+        width: 100vw;
+        height: 5vh;
+    }
+    nav ul{
+        display: none;
+    }
+    nav a > img{
+        margin-left: 20px;
+        width: 200px;
+    }
+    #menu i{
+        display: block;
+    }
+    #home {
+        padding: 0;
+        width: 100vw;
+    }
+    #boxes{
+        width: 100vw;
+    }
+    #boxes .box{
+        width: 33vw;
+    }
+    #partners{
+        width: 100vw;
+    }
 }
 @media screen and (max-width:1270px){
     #partners_p{
@@ -275,37 +362,86 @@ color: black;
         font-size: 1rem;
     }
 }
-/* end partners */
-/* start numbers */
-#numbers{
-    background-color:rgba(38, 61, 66, 0.1);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 15vh 0;
-    
-}
-#numsub{
-    width: 50%;
-    height: 30%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-    grid-template-rows:repeat(2,1fr);
+/* end numbers */
+/* start citys */
+#citys{
     width: 50vw;
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#citys > div{
+    width: 100%;
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+#citys .city{
+    width: 17vw;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px black;
     overflow: hidden;
 }
-
-#numbers #numdiv{
-    grid-row-start:1 ;
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-end: 3;
+#citys .city img{
+    width: 100%;
+}
+#citys .city>div{
     display: flex;
-    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-between;
 }
-#numbers .numbers{
-    width: 50%;
+#citys .city>div p{
+    color: var(--green_main);
+    font-weight: 400;
+    font-size: 1.25rem;
 }
-/* end numbers */
+#citys .city>div button{
+    background-color: rgb(61,131,223);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: white;
+}
+#citys h1{
+    margin: 30px 0;
+    color: var(--green_secondary);
+}
+#citys h2{
+    margin: 30px 0;
+    color: var(--green_main);
+    font-size: 2rem;
+    font-weight: 300;
+}
+#citys h3{
+    margin: 30px 0;
+    color: var(--green_main);
+    font-size: 0.75rem;
+    font-weight: 200;
+}
+#citys > button{
+    background-color: rgb(61,131,223);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 50px;
+}
+/* end citys */
+footer{
+    color: var(--green_secondary);
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(0, 191, 165);
+    padding: 20px 0;
+
+}
+footer div{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
