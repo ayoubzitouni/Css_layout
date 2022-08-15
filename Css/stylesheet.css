@@ -92,7 +92,7 @@ main{
     align-items: center;
 }
 #home{
-    width: 50vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,6 +111,7 @@ main{
 #home>#text{
     margin: 70px 0;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
 #text .text{
@@ -142,6 +143,7 @@ main{
 .box i{
     color: white;
 }
+
 #boxes #patients_box{
     background-color: rgba(0, 191, 165, var(--alpha));
     
@@ -257,24 +259,36 @@ color: black;
 /* end home */
 /* start partners */
 #partners{
-    height: 5vh;
-    margin: 50px 0;
     width: 50vw;
     display:flex;
     justify-content: flex-start;
     align-items: center;
 }
 #partners_p{
-    width: 20vw;
+    width: 250px;
     color: var(--green_main);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 #partners_logo ul{ 
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
     list-style: none;
-    margin: 0 15px;
+}
+
+#partners_logo ul li{
+    width: 100px;
+    height: 20px;
+}
+#partners_logo ul li a img{
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+#partners_logo ul li a img:hover{
+    filter: grayscale(0%);
+    
 }
 #partners_logo ul li{
     color: var(--green_secondary);
@@ -297,9 +311,9 @@ color: black;
         align-items: center;
     }
     #partners_p{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         text-align: center;
-        width: 100%;       
+        width: 250px;       
     }
     #text{
         width: 100%;
@@ -313,13 +327,13 @@ color: black;
     #boxes .box{
         padding: 0;
         margin: 10px 0;
-        width: 100vw;
+        width: 100%;
     } 
     #boxes .box i,h1,h2,select{
         padding: 10px;
     }
 }
-@media only screen and (max-width:840px){
+@media only screen and (min-width:683px) and (max-width:840px){
     header{
         height: 8vh;
         align-items: center;
@@ -355,7 +369,7 @@ color: black;
 @media screen and (max-width:1270px){
     #partners_p{
         text-align: center;
-        width: 100%;
+        width: 250px;
         font-size: 1rem;
     }
     #partners_logo i,a{
